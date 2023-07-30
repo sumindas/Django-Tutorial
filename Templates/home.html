@@ -1,0 +1,105 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/user_registeration/assets/css/style.css">
+    <title>Home Page</title>
+  </head>
+  <body style="background:  #ffd9b0;">
+    <div class="main">
+        <div class="header d-flex justify-content-center">
+        <div style="width: 100%;">
+        <h1 class="text-center">DINNER TIME</h1>
+    </div>
+    <div style="width: 6%;">
+        <a href="{% url 'logout' %}" class="btn btn-dark p-2">Logout</a>
+    </div>
+    </div>
+      <div class="container d-flex ">
+         
+              <div class="booking-image col-lg-6">
+                  <img class="booking-img img-fluid" src="{% static 'images/form-img.jpg'%}" alt="Booking Image">
+              </div>
+              <div class="booking-form col-lg-6" style="background: #111;">
+                  <form id="booking-form">
+                      <h2 class="text-white">Booking place for your dinner!</h2>
+                      <div class="form-group form-input">
+                          <input type="text" name="name" id="name" value="" required/>
+                          <label for="name" class="form-label text-white">Your name</label>
+                      </div>
+                      <div class="form-group form-input">
+                          <input type="number" name="phone" id="phone" value="" required />
+                          <label for="phone" class="form-label text-white">Your phone number</label>
+                      </div>
+                      <div class="form-group">
+                          <div class="select-list">
+                              <select name="time" id="time" required>
+                                  <option value="">Time</option>
+                                  <option value="6pm">6:00 PM</option>
+                                  <option value="7pm">7:00 PM</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="select-list">
+                              <select name="food" id="food" required>
+                                  <option value="">Food</option>
+                                  <option value="seasonalfish">Seasonal steamed fish</option>
+                                  <option value="assortedmushrooms">Assorted mushrooms</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="form-radio">
+                          <label class="label-radio text-white"> Select Your Dining Space</label>
+                          <div class="radio-item-list">
+                              <span class="radio-item text-white">
+                                  <input type="radio" name="number_people" value="2" id="number_people_2" />
+                                  <label for="number_people_2">2</label>
+                              </span>
+                              <span class="radio-item active text-white">
+                                  <input type="radio" name="number_people" value="4" id="number_people_4" checked="checked" />
+                                  <label for="number_people_4">4</label>
+                              </span>
+                              <span class="radio-item text-white">
+                                  <input type="radio" name="number_people" value="6" id="number_people_6" />
+                                  <label for="number_people_6">6</label>
+                              </span>
+                              <span class="radio-item text-white">
+                                  <input type="radio" name="number_people" value="8" id="number_people_8" />
+                                  <label for="number_people_8">8</label>
+                              </span>
+                              <span class="radio-item text-white">
+                                  <input type="radio" name="number_people" value="10" id="number_people_10" />
+                                  <label for="number_people_10">10</label>
+                              </span>
+                          </div>
+                      </div>
+
+                      <div class="form-submit d-flex">
+                          <input type="submit" value="Book now" class="submit p-2" style="background: #ffd9b0;" id="submit" name="submit" />
+                         
+                      </div>
+                      <a href="#" class="vertify-booking">Verify your booking info from your phone</a>
+                  </form>
+              </div>
+
+          <!-- </div> -->
+      </div>
+
+  </div>
+
+  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'https://code.jquery.com/jquery-3.3.1.slim.min.js' %}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="{% static 'https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js'%}" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="{% static 'https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js'%}" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
